@@ -24,6 +24,24 @@
   color: white;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.red-bar {
+  width: 110%;
+  height: 75px;
+  background-color: #E51636;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .App-link {
   color: #61dafb;
 }

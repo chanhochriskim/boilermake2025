@@ -52,6 +52,9 @@ body {
 .content {
   margin-top: 75px; /* make sure not hidden behind the red bar */
   padding: 20px;
+  width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-link {
@@ -65,4 +68,22 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+    font-family: 'Kollektif';
+    src: url('/public/Kollektif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.order-display {
+    white-space: pre-wrap;
+    padding: 10px;
+    font-family: 'Kollektif', sans-serif;
+    color: #545454;
+    font-size: 35px; /* Set font size to 35 */
+    line-height: 1.5; /* Adjust line spacing */
+    max-height: 550px; /* Set a max height for the box */
+    overflow-y: auto; /* Enable vertical scrolling */
 }

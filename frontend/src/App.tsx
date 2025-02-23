@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Employee from './Employee';
+import OrderDisplay from './OrderDisplay';
 
 function App() {
+  const orderText = `  - Chicken Sandwich
+    \t- No pickles
+    \t- Extra sauce
+  - Waffle Fries
+    \t- Large
+  - Drink
+    \t- Sweet Tea
+  - Drink
+    \t- Sweet Tea
+  - Drink
+    \t- Sweet Tea
+  - Drink
+    \t- Sweet Tea
+  - Drink
+    \t- Sweet Tea`;
+
+  const orderDisplayRef = useRef(null);
+
+  interface OrderDisplayRef {
+    updateOrderText: (newOrderText: string) => void;
+  }
+
+  const updateOrder = (newOrderText: string) => {
+    if (orderDisplayRef.current) {
+      (orderDisplayRef.current as OrderDisplayRef).updateOrderText(newOrderText);
+    }
+  };
+
   return (
     <div>
       <div className="red-bar" style={{ height: '120px' }}>
@@ -14,13 +43,14 @@ function App() {
           <div style={{ flex: '2 1 0%' }}></div>
           <div style={{ flex: '2 1 0%', display: 'flex' }}>
             <div style={{ flex: '3 1 0%', border: 'none' }}>
-              <img src={'/chickfilingo menu.png'} style={{ alignContent: 'center', height: '75vh', paddingLeft: '20px'}}/>
+              <img src={'/chickfilingo menu.png'} alt="Menu" style={{ alignContent: 'center', height: '75vh', paddingLeft: '20px'}}/>
             </div>
             <div style={{ flex: '2.25 1 0%', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <Employee />
             </div>
-            <div style={{ flex: '2.25 1 0%', border: '1px solid black' }}>
-              Order
+            <div style={{ flex: '2.25 1 0%', border: 'none' }}>
+              <img src={'/your order text.png'} alt="Your Order Text" style={{ width: '250px', paddingLeft: '20px', paddingTop: '0px'}}/>
+              <OrderDisplay orderText={orderText} />
             </div>
           </div>
           <div style={{ flex: '1 1 0%' }}></div>

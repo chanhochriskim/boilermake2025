@@ -1,4 +1,4 @@
-# Chick-fi-Lingo
+# 🍟 Chick-fi-Lingo 🐔
 
 Chick-fi-Lingo is a Chick-fil-A-themed ordering application designed to enhance accessibility for individuals who may not be fluent in English. Whether at the drive-thru or on a phone call, Chick-fi-Lingo’s AI-powered Lingo Bot could ensure a smooth and inclusive ordering experience by supporting multiple languages—even allowing users to switch languages mid-sentence. 
 

@@ -4,7 +4,7 @@ import Employee from './Employee';
 import OrderDisplay from './OrderDisplay';
 
 function App() {
-  const orderText = `  - Chicken Sandwich
+  const orderText = `   - Chicken Sandwich
     \t- No pickles
     \t- Extra sauce
   - Waffle Fries

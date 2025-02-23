@@ -15,7 +15,7 @@ We used React, Typescript, CSS, HTML, for the frontend. For the backend we utili
 We initially planned to implement a cloud-based backend using AWS but encountered limitations while training the model through SageMaker. As it was our first time working with AWS and AI/ML, this led to unexpected challenges. We also attempted to utilize access to a supercomputer given to hackathon members by Purdue RCAC, however we were unable to get approved in time. Ultimately, we used the Llama 3.2 instruct model optimized by Unsloth for the backend functionality.
 
 ## Accomplishments that we're proud of
-Despite facing unexpected challenges, we gained valuable insights, particularly in backend development, and enhanced the website’s aesthetics and engagement through TypeScript.
+Despite facing unexpected challenges, we gained valuable insights, particularly in backend development, and enhanced the website’s aesthetics and engagement through TypeScript. This was also our first time integrating AI into our projects, and we learned tons!
 
 ## What we learned
 We gained hands-on experience with the basics of AI/ML, and learned how to interlink the backend and frontend, and, as this was our first full-stack development project with AI implementation, we encountered valuable learning opportunities throughout the process.

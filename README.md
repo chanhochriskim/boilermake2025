@@ -24,3 +24,24 @@ We gained hands-on experience with the basics of AI/ML, and learned how to inter
 In our eyes, the real-world application of Chick-fi-Lingo is in drive-thrus and ordering by phone, where individuals who are less comfortable ordering in English can feel free to order in any language they want - even switching languages mid-sentence! Looking ahead, we aim to use more powerful AI models which will allow for better language understanding and quicker response times. Additionally, we plan to develop a model trained on specific keywords and datasets. Launching Chick-Fi-Lingo at Purdue's Chick-fil-A could also present a great business opportunity, as it would help international students feel less pressured when ordering, with Lingo Bot offering support in any language.
 
 # How to Run
+## Use Node 
+```
+git clone https://github.com/chanhochriskim/boilermake2025
+cd boilermake2025
+```
+
+## Frontend
+```
+cd frontend
+npm install
+npm start
+```
+
+## Backend
+```
+cd backend
+python app.py
+```
+
+## Local Host
+navigate to https://localhost:3000/

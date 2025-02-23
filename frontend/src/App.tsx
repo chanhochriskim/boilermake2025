@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './App.css';
+import './Employee.css'; // Import the Employee.css file
 import Employee from './Employee';
 import OrderDisplay from './OrderDisplay';
 
@@ -21,6 +22,11 @@ function App() {
     \t- Sweet Tea`;
 
   const orderDisplayRef = useRef(null);
+  interface EmployeeRef {
+    startListening: () => void;
+  }
+
+  const employeeRef = useRef<EmployeeRef>(null);
 
   interface OrderDisplayRef {
     updateOrderText: (newOrderText: string) => void;
@@ -30,6 +36,15 @@ function App() {
     if (orderDisplayRef.current) {
       (orderDisplayRef.current as OrderDisplayRef).updateOrderText(newOrderText);
     }
+  };
+
+  const handleOrderButtonClick = () => {
+    // Trigger microphone capture and start employee listening animation
+    console.log('Order button clicked');
+    if (employeeRef.current) {
+      employeeRef.current.startListening();
+    }
+    // Add your microphone capturing logic here
   };
 
   return (
@@ -46,7 +61,14 @@ function App() {
               <img src={'/chickfilingo menu.png'} alt="Menu" style={{ alignContent: 'center', height: '75vh', paddingLeft: '20px'}}/>
             </div>
             <div style={{ flex: '2.25 1 0%', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <Employee />
+              <div className="employee-container">
+                <Employee ref={employeeRef} />
+                <div className="employee-buttons">
+                  <button onClick={handleOrderButtonClick}>
+                    <img src={'/order button.png'} alt="Order Button" style={{ width: '100px' }} />
+                  </button>
+                </div>
+              </div>
             </div>
             <div style={{ flex: '2.25 1 0%', border: 'none' }}>
               <img src={'/your order text.png'} alt="Your Order Text" style={{ width: '250px', paddingLeft: '20px', paddingTop: '0px'}}/>

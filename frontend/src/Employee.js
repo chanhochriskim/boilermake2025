@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import './Employee.css';
 
-function Employee() {
+const Employee = forwardRef((props, ref) => {
   const [state, setState] = useState('idle');
+
+  useImperativeHandle(ref, () => ({
+    startListening() {
+      setState('listening');
+    },
+    stopListening() {
+      setState('idle');
+    }
+  }));
 
   return (
     <div className="employee-container">
@@ -14,6 +23,6 @@ function Employee() {
       </div>
     </div>
   );
-}
+});
 
 export default Employee;

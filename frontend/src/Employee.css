@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Ensure the container is positioned relative */
 }
 
 .employee {
@@ -10,8 +11,8 @@
   background-image: url('/public/employee/idle.png');
   background-size: cover;
   animation: idle-animation 2s infinite;
-  margin-left: -50px; /* Move to the left by 10 pixels */
-  margin-top: 20px; /* Move down by 20 pixels */
+  margin-left: -55px; /* Move to the left by 10 pixels */
+  margin-top: 0px; /* Move up by 10 pixels */
 }
 
 .employee.idle {
@@ -29,13 +30,18 @@
 }
 
 .employee-buttons {
-  margin-top: 20px;
+  position: absolute;
+  bottom: -85px; /* Move the button down by 10px */
+  left: 50%;
+  transform: translateX(-60%);
   display: flex;
   justify-content: center;
 }
 
 .employee-buttons button {
-  margin: 0 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 @keyframes idle-animation {

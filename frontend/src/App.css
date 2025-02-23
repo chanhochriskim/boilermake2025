@@ -87,3 +87,19 @@ body {
     max-height: 550px; /* Set a max height for the box */
     overflow-y: auto; /* Enable vertical scrolling */
 }
+
+.order-button-container {
+  position: relative;
+}
+
+.order-button {
+  position: absolute;
+  bottom: 0;
+  
+  left: 50%;
+  transform: translateX(-60%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1; /* Ensure the button is on top */
+}
